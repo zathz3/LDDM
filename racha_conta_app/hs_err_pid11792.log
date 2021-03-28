@@ -1,0 +1,126 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 480104 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=11792, tid=0x00000000000035d4
+#
+# JRE version:  (8.0_242-b01) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.242-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002ade000):  JavaThread "Unknown thread" [_thread_in_vm, id=13780, stack(0x0000000002ba0000,0x0000000002ca0000)]
+
+Stack: [0x0000000002ba0000,0x0000000002ca0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002ade000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=13780, stack(0x0000000002ba0000,0x0000000002ca0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000700a00000, size: 3062 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff68ded0000 - 0x00007ff68df01000 	C:\Dev\android-studio\jre\bin\java.EXE
+0x00007ffca7130000 - 0x00007ffca7325000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc82110000 - 0x00007ffc82122000 	C:\Program Files\AVAST Software\Avast\aswhook.dll
+0x00007ffca63e0000 - 0x00007ffca649d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffca4b70000 - 0x00007ffca4e39000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffca5950000 - 0x00007ffca59fc000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffca54f0000 - 0x00007ffca558e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffca58b0000 - 0x00007ffca594c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffca6fc0000 - 0x00007ffca70eb000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffca5600000 - 0x00007ffca57a0000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffca4e40000 - 0x00007ffca4e62000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffca65d0000 - 0x00007ffca65fa000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffca5080000 - 0x00007ffca518b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffca4ad0000 - 0x00007ffca4b6d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffca4f20000 - 0x00007ffca5020000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc870b0000 - 0x00007ffc8734a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.844_none_ca00b6081b84eb1d\COMCTL32.dll
+0x00007ffca5a00000 - 0x00007ffca5a30000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000000068b60000 - 0x0000000068c32000 	C:\Dev\android-studio\jre\jre\bin\msvcr100.dll
+0x0000000068c40000 - 0x000000006948b000 	C:\Dev\android-studio\jre\jre\bin\server\jvm.dll
+0x00007ffca55f0000 - 0x00007ffca55f8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffc949f0000 - 0x00007ffc94a17000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc92c80000 - 0x00007ffc92c89000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffc9f2b0000 - 0x00007ffc9f2ba000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffca6280000 - 0x00007ffca62eb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffc8cf10000 - 0x00007ffc8cf1f000 	C:\Dev\android-studio\jre\jre\bin\verify.dll
+0x00007ffc89af0000 - 0x00007ffc89b19000 	C:\Dev\android-studio\jre\jre\bin\java.dll
+0x00007ffc899b0000 - 0x00007ffc899c6000 	C:\Dev\android-studio\jre\jre\bin\zip.dll
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): .
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Dev\Java\jdk1.8
+PATH=C:\Dev\android_sdk\platform-tools;C:\Dev\android_sdk\emulator;C:\Dev\flutter\bin;C:\Dev\gradle-6.8.3\bin;C:\Dev\apache-maven-3.6.3\bin;C:\Dev\Java\jdk1.8\bin;C:\Dev\Git\cmd;C:\Dev\android_sdk\cmdline-tools\tools\bin;C:\Dev\Microsoft VS Code\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-12.0.1\bin;C:\MinGW\bin;C:\Users\Joao Sena\Desktop\arquitetura 1\2020-1_arq1_programas\verilog_v11b\bin;C:\Users\Joao Sena\Desktop\arquitetura 1\2020-1_arq1_programas\verilog_v11b\gtkwave\bin;C:\Program Files (x86)\Java\jdk-12.0.1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Joao Sena\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Joao Sena\AppData\Local\Programs\Python\Python38\;C:\Users\Joao Sena\AppData\Local\Microsoft\WindowsApps;C:\Users\Joao Sena\AppData\Local\atom\bin;C:\Users\Joao Sena\AppData\Local\GitHubDesktop\bin;C:\Users\Joao Sena\AppData\Local\Microsoft\WindowsApps;C:\Users\Joao Sena\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Dev\Microsoft VS Code\bin;;C:\Dev\flutter\bin\mingit\cmd
+USERNAME=Joao Sena
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.804)
+
+CPU:total 6 (initial active 6) (6 cores per cpu, 1 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 12540224k(1259092k free), swap 20732224k(5348k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.242-b01) for windows-amd64 JRE (1.8.0_242-release-1644-b01), built by "builder" with MS VC++ 10.0 (VS2010)
+
+time: Sat Mar 27 20:54:43 2021
+timezone: E. South America Standard Time
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
